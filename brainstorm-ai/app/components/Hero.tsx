@@ -2,28 +2,29 @@
 
 import Image from "next/image";
 import docToQuiz from "../../public/assets/docToQuiz.png";
+import Box from "@/public/components/layout/Box";
+import Heading from "@/public/components/text-styles/Heading";
+import Body from "@/public/components/text-styles/Body";
+import PrimaryButton from "@/public/components/Buttons/PrimaryButton";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen min-h-[90vh] flex items-center justify-between px-24 bg-[#1F0438] overflow-hidden">
+    <Box className="relative w-full min-h-[90vh] flex items-center justify-between px-24 bg-transparent overflow-hidden">
       {/* === Hero Content === */}
-      <div className="relative z-10 flex flex-col max-w-xl space-y-6">
-        <h1 className="text-5xl font-extrabold text-white leading-tight text-glow">
+      <Box className="relative z-10 flex flex-col max-w-xl space-y-6 -mt-10">
+        <Heading
+          className="text-5xl font-extrabold text-white leading-tight"
+          style={{ textShadow: "0 10px 24px rgba(0, 0, 0, 0.55)" }}>
           TRANSFORM YOUR NOTES INTO QUIZZES. INSTANTLY.
-        </h1>
+        </Heading>
 
-        <p className="text-gray-200 text-lg leading-relaxed">
+        <Body className="text-gray-200 text-lg leading-relaxed -mt-4">
           Upload your study materials — PPTs, PDFs, Docs, or notes and let BrainStorm.AI instantly generate personalized
           quizzes for quick revision, classroom practice, or self-study.
-        </p>
+        </Body>
 
-        <div className="flex space-x-5 pt-4">
-          <button
-            className="bg-gradient-to-r from-[#FAA600] to-[#E9395E]
-                       text-white font-semibold px-6 py-3 rounded-full shadow-lg
-                       hover:scale-105 transition-transform">
-            GET STARTED FREE
-          </button>
+        <Box className="flex space-x-5 pt-4">
+          <PrimaryButton buttonText="GET STARTED FREE" />
 
           <button
             className="border border-[#FAA600] text-white font-semibold
@@ -31,11 +32,11 @@ export default function Hero() {
                        hover:text-[#1F0438] transition-all">
             SEE HOW IT WORKS
           </button>
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       {/* Right Image */}
-      <div className="z-10 flex-shrink-0">
+      <Box className="z-10 flex-shrink-0">
         <Image
           src={docToQuiz}
           alt="Document to Quiz Illustration"
@@ -43,7 +44,7 @@ export default function Hero() {
           height={420}
           className="object-contain drop-shadow-2xl"
         />
-      </div>
-    </section>
+      </Box>
+    </Box>
   );
 }

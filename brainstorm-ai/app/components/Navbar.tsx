@@ -1,33 +1,44 @@
 "use client";
-
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { Text } from "@radix-ui/themes";
+import { Heading } from "@/public/components/text-styles/Heading";
 import Image from "next/image";
 import logo from "../../public/assets/logo.png";
+import Box from "@/public/components/layout/Box";
+import { Subheading } from "@/public/components/text-styles";
 
 export default function Navbar() {
   return (
-    <NavigationMenu.Root className="w-screen h-full flex items-center justify-between px-32 pt-10 bg-[#1F0438]">
+    <Box className="w-full h-full flex items-center justify-between px-32 pt-10 bg-[#1F0438]">
       {/* Logo */}
-      <div className="flex-col items-center space-x-3 font-roboto">
+      <Box className="flex-col items-center space-x-3 font-roboto">
         <Image src={logo} alt="BrainStorm.AI logo" width={100} height={100} className="justify-self-center" />
-        <Text className="text-white text-2xl font-extrabold tracking-wide drop-shadow-md">BRAINSTORM.AI</Text>
-      </div>
+        <Heading className="" style={{ textShadow: "0px 5px 10px rgba(255,255,255,0.5)" }}>
+          BRAINSTORM.AI
+        </Heading>
+      </Box>
 
       {/* Nav Links */}
-      <div className="z-100">
-        <NavigationMenu.List className="flex items-center space-x-12">
+      <Box className="z-100">
+        <Box className="flex items-center space-x-13">
           {["Features", "How it Works?", "About", "Login"].map((label, i) => (
-            <NavigationMenu.Item key={i}>
-              <div
-                className="text-white text-lg font-medium hover:text-[#FAA600] transition-all duration-300
-                           drop-shadow-[0_2px_2px_rgba(255,255,255,0.3)] cursor-pointer">
-                <NavigationMenu.Link>{label}</NavigationMenu.Link>
-              </div>
-            </NavigationMenu.Item>
+            <Box key={i} className="relative inline-block group select-none">
+              <span
+                className="absolute left-0 top-0 text-transparent text-lg font-medium pointer-events-none whitespace-nowrap select-none"
+                style={{ textShadow: "0px 5px 10px rgba(255,255,255,0.5)" }}>
+                {label}
+              </span>
+              <Subheading
+                as="span"
+                className="
+                inline-block whitespace-nowrap 
+                text-white no-underline text-lg font-medium 
+                transition-transform duration-200 ease-out will-change-transform 
+                group-hover:-translate-y-1">
+                {label}
+              </Subheading>
+            </Box>
           ))}
-        </NavigationMenu.List>
-      </div>
-    </NavigationMenu.Root>
+        </Box>
+      </Box>
+    </Box>
   );
 }

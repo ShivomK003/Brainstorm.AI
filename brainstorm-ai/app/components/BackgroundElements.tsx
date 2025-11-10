@@ -12,7 +12,7 @@ function BackgroundElements() {
       {/* Yellow Circle */}
       <Box
         replace={true}
-        className="absolute top-[-50vh] right-[10vw] w-[479px] h-[479px] bg-[#FAA600] rounded-full blur-[50px] opacity-80 z-1"
+        className="absolute top-[-45vh] right-[1vw] w-[500px] h-[500px] bg-[#FAA600] rounded-full blur-[50px] opacity-80 z-1"
       />
     </>
   );

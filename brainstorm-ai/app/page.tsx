@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import BackgroundElements from "./components/BackgroundElements";
+import Section2 from "./components/Section2/Section2";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <BackgroundElements />
       <Navbar />
       <Hero />
+      <Section2 />
     </main>
   );
 }

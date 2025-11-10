@@ -6,10 +6,11 @@ import Box from "@/public/components/layout/Box";
 import Heading from "@/public/components/text-styles/Heading";
 import Body from "@/public/components/text-styles/Body";
 import PrimaryButton from "@/public/components/Buttons/PrimaryButton";
+import SecondaryButton from "@/public/components/Buttons/SecondaryButton";
 
 export default function Hero() {
   return (
-    <Box className="relative w-full min-h-[90vh] flex items-center justify-between px-24 bg-transparent overflow-hidden">
+    <Box className="relative w-full min-h-[90vh] flex items-center justify-between px-24 -mt-10 bg-transparent overflow-hidden">
       {/* === Hero Content === */}
       <Box className="relative z-10 flex flex-col max-w-xl space-y-6 -mt-10">
         <Heading
@@ -25,13 +26,7 @@ export default function Hero() {
 
         <Box className="flex space-x-5 pt-4">
           <PrimaryButton buttonText="GET STARTED FREE" />
-
-          <button
-            className="border border-[#FAA600] text-white font-semibold
-                       px-6 py-3 rounded-full hover:bg-[#FAA600]
-                       hover:text-[#1F0438] transition-all">
-            SEE HOW IT WORKS
-          </button>
+          <SecondaryButton buttonText="SEE HOW IT WORKS" />
         </Box>
       </Box>
 

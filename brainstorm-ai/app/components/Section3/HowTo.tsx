@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@/public/components/layout/Box";
 import { Heading } from "@/public/components/text-styles/Heading";
 import InstructionTile from "./InstructionTile";
-import Circles from "./Circles";
+import AnimatedSection from "@/lib/animations/AnimatedSection";
 
 function HowTo() {
   const instructions = [
@@ -27,12 +27,13 @@ function HowTo() {
       {/* Gradient Line */}
       <Box className="w-full h-[1px] bg-gradient-to-r from-[#FAA600] to-[#E9395E] mt-5 mb-10" />
       <Box className="w-[80%] h-[300px] flex bg-white opacity-10 rounded-2xl p-10 mx-auto mb-5" />
-      <Box className="w-full h-full flex justify-between gap-4 mb-40">
-        {instructions.map((instruction, index) => (
-          <InstructionTile key={index} title={instruction.title} description={instruction.description} />
-        ))}
-      </Box>
-      <Circles />
+      <AnimatedSection direction="right" stagger={true}>
+        <Box className="w-full h-full flex justify-between gap-4 mb-40">
+          {instructions.map((instruction, index) => (
+            <InstructionTile key={index} title={instruction.title} description={instruction.description} />
+          ))}
+        </Box>
+      </AnimatedSection>
     </Box>
   );
 }

@@ -8,7 +8,7 @@ const roboto = Roboto({
 });
 
 export interface SubheadingProps extends React.HTMLAttributes<HTMLElement> {
-  as?: "h2" | "h3" | "div" | "span" | "p";
+  as?: "h2" | "h3" | "div" | "span" | "p" | "a";
   children: React.ReactNode;
   style?: React.CSSProperties;
 }

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Adjust to height of your fixed navbar */
+}
+
 html,
 body {
   -ms-overflow-style: none;

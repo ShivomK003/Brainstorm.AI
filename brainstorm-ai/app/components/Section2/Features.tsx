@@ -2,11 +2,11 @@ import React from "react";
 import { Heading } from "@/public/components/text-styles/Heading";
 import Box from "@/public/components/layout/Box";
 import FeatureBox from "./FeatureBox";
-import Triangles from "./Triangles";
 import feature1 from "../../../public/assets/feature1.png";
 import feature2 from "../../../public/assets/feature2.png";
 import feature3 from "../../../public/assets/feature3.png";
 import feature4 from "../../../public/assets/feature4.png";
+import AnimatedSection from "@/lib/animations/AnimatedSection";
 
 function Features() {
   const features = [
@@ -32,26 +32,25 @@ function Features() {
     },
   ];
   return (
-    <Box className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-10">
+    <Box className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-20">
       <Box className="w-full">
         <Heading className="text-center text-[36px]">WHY BRAINSTORM.AI?</Heading>
       </Box>
       {/* Gradient Line */}
       <Box className="w-full h-[1px] bg-gradient-to-r from-[#FAA600] to-[#E9395E] mt-5" />
-      {/* Background triangles */}
-      <Triangles />
-
-      <Box className="relative z-[1] w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-4 mt-6 mb-40 auto-rows-fr items-stretch">
-        {features.map((feature, index) => (
-          <Box key={index} className="h-full">
-            <FeatureBox
-              featureImage={feature.image.src}
-              featureTitle={feature.title}
-              featureDescription={feature.description}
-            />
-          </Box>
-        ))}
-      </Box>
+      <AnimatedSection direction="right" stagger={true}>
+        <Box className="relative z-[1] w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-4 mt-6 mb-40 auto-rows-fr items-stretch z-20">
+          {features.map((feature, index) => (
+            <Box key={index} className="h-full">
+              <FeatureBox
+                featureImage={feature.image.src}
+                featureTitle={feature.title}
+                featureDescription={feature.description}
+              />
+            </Box>
+          ))}
+        </Box>
+      </AnimatedSection>
     </Box>
   );
 }

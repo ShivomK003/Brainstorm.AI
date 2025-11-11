@@ -14,7 +14,7 @@ function FeatureBox({ featureImage, featureTitle, featureDescription }: FeatureB
   return (
     <Box
       className="relative w-full h-full min-h-[260px] rounded-2xl overflow-hidden
-      bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
+      bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_20px_10px_rgba(0,0,0,0.35)]">
       {/* subtle inner highlight/frame */}
       <Box aria-hidden className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10" />
 

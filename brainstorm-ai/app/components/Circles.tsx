@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@/public/components/layout/Box";
 
-function BackgroundElements() {
+function Circles() {
   return (
     <>
       {/* Pink Circle */}
@@ -18,4 +18,4 @@ function BackgroundElements() {
   );
 }
 
-export default BackgroundElements;
+export default Circles;

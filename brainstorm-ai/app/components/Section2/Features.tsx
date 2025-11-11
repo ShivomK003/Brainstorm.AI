@@ -8,7 +8,7 @@ import feature2 from "../../../public/assets/feature2.png";
 import feature3 from "../../../public/assets/feature3.png";
 import feature4 from "../../../public/assets/feature4.png";
 
-function Section2() {
+function Features() {
   const features = [
     {
       image: feature1,
@@ -41,7 +41,7 @@ function Section2() {
       {/* Background triangles */}
       <Triangles />
 
-      <Box className="relative z-[1] w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-8 mt-6 auto-rows-fr items-stretch">
+      <Box className="relative z-[1] w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xl:gap-4 mt-6 mb-40 auto-rows-fr items-stretch">
         {features.map((feature, index) => (
           <Box key={index} className="h-full">
             <FeatureBox
@@ -52,9 +52,8 @@ function Section2() {
           </Box>
         ))}
       </Box>
-      <Box className="w-10 flex items-center justify-center mt-8"></Box>
     </Box>
   );
 }
 
-export default Section2;
+export default Features;

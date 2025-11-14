@@ -6,13 +6,19 @@ import Box from "@/public/components/layout/Box";
 import { Subheading } from "@/public/components/text-styles";
 import Link from "next/link";
 
-export default function Navbar() {
-  const links = [
-    { label: "Features", href: "#features" },
-    { label: "How it Works?", href: "#how-to" },
-    { label: "About", href: "#about-me" },
-    { label: "Login", href: "/login" },
-  ];
+export default function Navbar({ isLogin = false }: { isLogin?: boolean }) {
+  const links = isLogin
+    ? [
+        { label: "Features", href: "/#features" },
+        { label: "How it Works?", href: "/#how-to" },
+        { label: "About", href: "/#about-me" },
+      ]
+    : [
+        { label: "Features", href: "#features" },
+        { label: "How it Works?", href: "#how-to" },
+        { label: "About", href: "#about-me" },
+        { label: "Login", href: "/login" },
+      ];
 
   return (
     <Box className="w-full h-full flex items-center justify-between px-32 pt-10 bg-[#1F0438]">

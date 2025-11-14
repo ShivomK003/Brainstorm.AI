@@ -79,14 +79,10 @@ export default function AnimatedSection({
   };
 
   return (
-    <motion.section
-      id={id}
-      ref={ref}
-      variants={variants}
-      initial="hidden"
-      animate={controls}
-      className="relative will-change-transform">
-      {children}
-    </motion.section>
+    <section id={id} className="relative overflow-hidden">
+      <motion.div ref={ref} variants={variants} initial="hidden" animate={controls} className="will-change-transform">
+        {children}
+      </motion.div>
+    </section>
   );
 }

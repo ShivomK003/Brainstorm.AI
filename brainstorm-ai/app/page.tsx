@@ -9,25 +9,25 @@ import Box from "@/public/components/layout/Box";
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen bg-[#1F0438] text-white overflow-x-hidden">
+    <main className="relative w-screen min-h-screen bg-[#1F0438] text-white overflow-x-hidden">
       <Box className="w-full h-full">
         <BackgroundElements />
 
         <Navbar />
 
-        <AnimatedSection id="hero" direction="right">
+        <AnimatedSection direction="right">
           <Hero />
         </AnimatedSection>
 
-        <AnimatedSection id="features" direction="left">
+        <AnimatedSection direction="left">
           <Features />
         </AnimatedSection>
 
-        <AnimatedSection id="how-to" direction="left">
+        <AnimatedSection direction="left">
           <HowTo />
         </AnimatedSection>
 
-        <AnimatedSection id="about-me" direction="left">
+        <AnimatedSection direction="left">
           <AboutMe />
         </AnimatedSection>
       </Box>

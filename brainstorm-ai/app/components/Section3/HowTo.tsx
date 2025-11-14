@@ -3,6 +3,7 @@ import Box from "@/public/components/layout/Box";
 import { Heading } from "@/public/components/text-styles/Heading";
 import InstructionTile from "./InstructionTile";
 import AnimatedSection from "@/lib/animations/AnimatedSection";
+import AnimatedSequence from "./AnimatedSequence";
 
 function HowTo() {
   const instructions = [
@@ -20,15 +21,19 @@ function HowTo() {
     },
   ];
   return (
-    <Box className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-10 mt-20">
+    <Box
+      id="how-to"
+      className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-10 mt-20">
       <Box className="w-full">
         <Heading className="text-center text-[36px]">HOW IT WORKS?</Heading>
       </Box>
       {/* Gradient Line */}
-      <Box className="w-full h-[1px] bg-gradient-to-r from-[#FAA600] to-[#E9395E] mt-5 mb-10" />
-      <Box className="w-[80%] h-[300px] flex bg-white opacity-10 rounded-2xl p-10 mx-auto mb-5" />
+      <Box className="w-full h-[1px] bg-gradient-to-r from-[#FAA600] to-[#E9395E] mt-5" />
+      <Box className="w-full flex justify-center">
+        <AnimatedSequence />
+      </Box>
       <AnimatedSection direction="right" stagger={true}>
-        <Box className="w-full h-full flex justify-between gap-4 mb-40">
+        <Box className="w-full h-full flex justify-between gap-4 mb-20">
           {instructions.map((instruction, index) => (
             <InstructionTile key={index} title={instruction.title} description={instruction.description} />
           ))}

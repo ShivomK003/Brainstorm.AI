@@ -10,7 +10,9 @@ import SecondaryButton from "@/public/components/Buttons/SecondaryButton";
 
 export default function Hero() {
   return (
-    <Box className="relative w-full min-h-[90vh] flex items-center justify-between mx-auto px-24 -mt-10 bg-transparent overflow-hidden">
+    <Box
+      id="hero"
+      className="relative w-full min-h-[90vh] flex items-center justify-between mx-auto px-24 -mt-10 bg-transparent overflow-hidden">
       {/* === Hero Content === */}
       <Box className="relative z-10 flex flex-col max-w-xl space-y-6 -mt-10">
         <Heading

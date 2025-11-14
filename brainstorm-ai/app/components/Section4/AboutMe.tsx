@@ -8,7 +8,9 @@ import AnimatedSection from "@/lib/animations/AnimatedSection";
 
 function AboutMe() {
   return (
-    <Box className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-20 mt-20">
+    <Box
+      id="about-me"
+      className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-20 mt-20">
       <Box className="w-full">
         <Heading className="text-center text-[36px]">ABOUT ME</Heading>
       </Box>

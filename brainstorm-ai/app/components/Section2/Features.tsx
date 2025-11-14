@@ -32,7 +32,9 @@ function Features() {
     },
   ];
   return (
-    <Box className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-20">
+    <Box
+      id="features"
+      className="relative w-full h-full flex-col items-center justify-between px-6 md:px-12 lg:px-24 bg-transparent z-20">
       <Box className="w-full">
         <Heading className="text-center text-[36px]">WHY BRAINSTORM.AI?</Heading>
       </Box>

@@ -2,7 +2,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px; /* Adjust to height of your fixed navbar */
+  scroll-padding-top: 50px; /* Adjust to height of your fixed navbar */
+}
+
+:root,
+html,
+body {
+  overflow-x: hidden !important;
 }
 
 html,
@@ -15,4 +21,19 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+/* Chrome / Edge / Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for IE, Edge Legacy */
+body {
+  -ms-overflow-style: none;
 }

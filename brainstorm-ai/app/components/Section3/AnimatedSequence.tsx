@@ -4,12 +4,12 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-import neural from "../../../public/assets/how/neural.png";
-import doc from "../../../public/assets/how/doc.png";
-import cardPink from "../../../public/assets/how/card-pink.png";
-import cardWhite from "../../../public/assets/how/card-white.png";
-import cardYellow from "../../../public/assets/how/card-yellow.png";
-import brain from "../../../public/assets/how/brain.png";
+import neural from "../../../public/assets/images/how/neural.png";
+import doc from "../../../public/assets/images/how/doc.png";
+import cardPink from "../../../public/assets/images/how/card-pink.png";
+import cardWhite from "../../../public/assets/images/how/card-white.png";
+import cardYellow from "../../../public/assets/images/how/card-yellow.png";
+import brain from "../../../public/assets/images/how/brain.png";
 
 export default function AnimatedSequence() {
   const docControls = useAnimation();

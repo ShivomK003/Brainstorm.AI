@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
+import Box from "@/lib/components/layout/Box";
 
 function BackgroundElements() {
   return (

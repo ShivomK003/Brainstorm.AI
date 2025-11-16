@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
-import { Body } from "@/public/components/text-styles";
+import Box from "@/lib/components/layout/Box";
+import { Body } from "@/lib/components/text-styles";
 
 function Bio() {
   return (

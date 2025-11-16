@@ -1,8 +1,8 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
-import { Heading } from "@/public/components/text-styles/Heading";
+import Box from "@/lib/components/layout/Box";
+import { Heading } from "@/lib/components/text-styles/Heading";
 import Image from "next/image";
-import shivomImage from "../../../public/assets/shivomImage.jpg";
+import shivomImage from "../../../public/assets/images/shivomImage.jpg";
 import Bio from "./Bio";
 import AnimatedSection from "@/lib/animations/AnimatedSection";
 

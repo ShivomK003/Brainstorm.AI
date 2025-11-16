@@ -1,9 +1,9 @@
 "use client";
-import { Heading } from "@/public/components/text-styles/Heading";
+import { Heading } from "@/lib/components/text-styles/Heading";
 import Image from "next/image";
-import logo from "../../public/assets/logo.png";
-import Box from "@/public/components/layout/Box";
-import { Subheading } from "@/public/components/text-styles";
+import logo from "../../public/assets/images/logo.png";
+import Box from "@/lib/components/layout/Box";
+import { Subheading } from "@/lib/components/text-styles";
 import Link from "next/link";
 
 export default function Navbar({ isLogin = false }: { isLogin?: boolean }) {

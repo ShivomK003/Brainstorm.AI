@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
-import { Heading } from "@/public/components/text-styles/Heading";
+import Box from "@/lib/components/layout/Box";
+import { Heading } from "@/lib/components/text-styles/Heading";
 import InstructionTile from "./InstructionTile";
 import AnimatedSection from "@/lib/animations/AnimatedSection";
 import AnimatedSequence from "./AnimatedSequence";

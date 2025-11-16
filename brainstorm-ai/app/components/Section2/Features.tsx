@@ -1,11 +1,11 @@
 import React from "react";
-import { Heading } from "@/public/components/text-styles/Heading";
-import Box from "@/public/components/layout/Box";
+import { Heading } from "@/lib/components/text-styles/Heading";
+import Box from "@/lib/components/layout/Box";
 import FeatureBox from "./FeatureBox";
-import feature1 from "../../../public/assets/feature1.png";
-import feature2 from "../../../public/assets/feature2.png";
-import feature3 from "../../../public/assets/feature3.png";
-import feature4 from "../../../public/assets/feature4.png";
+import feature1 from "../../../public/assets/images/feature1.png";
+import feature2 from "../../../public/assets/images/feature2.png";
+import feature3 from "../../../public/assets/images/feature3.png";
+import feature4 from "../../../public/assets/images/feature4.png";
 import AnimatedSection from "@/lib/animations/AnimatedSection";
 
 function Features() {

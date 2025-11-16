@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
+import Box from "@/lib/components/layout/Box";
 
 function BackgroundLogin() {
   return (
@@ -7,7 +7,7 @@ function BackgroundLogin() {
       {/* Pink Circle */}
       <Box
         replace={true}
-        className="absolute top-[50vh] left-[-10vw] w-[500px] h-[500px] bg-[#E9395E] rounded-full blur-[90px] opacity-90 z-0"
+        className="absolute top-[40vh] left-[-10vw] w-[400px] h-[400px] bg-[#E9395E] rounded-full blur-[90px] opacity-90 z-0"
       />
       {/* Yellow Circle */}
       <Box

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import docToQuiz from "../../public/assets/docToQuiz.png";
-import Box from "@/public/components/layout/Box";
-import Heading from "@/public/components/text-styles/Heading";
-import Body from "@/public/components/text-styles/Body";
-import PrimaryButton from "@/public/components/Buttons/PrimaryButton";
-import SecondaryButton from "@/public/components/Buttons/SecondaryButton";
+import docToQuiz from "../../public/assets/images/docToQuiz.png";
+import Box from "@/lib/components/layout/Box";
+import Heading from "@/lib/components/text-styles/Heading";
+import Body from "@/lib/components/text-styles/Body";
+import PrimaryButton from "@/lib/components/Buttons/PrimaryButton";
+import SecondaryButton from "@/lib/components/Buttons/SecondaryButton";
 
 export default function Hero() {
   return (

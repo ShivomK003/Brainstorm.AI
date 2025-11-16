@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "@/public/components/layout/Box";
-import { Body, Subheading } from "@/public/components/text-styles";
+import Box from "@/lib/components/layout/Box";
+import { Body, Subheading } from "@/lib/components/text-styles";
 
 export interface InstructionTileProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

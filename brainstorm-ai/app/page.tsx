@@ -5,7 +5,7 @@ import Features from "./components/Section2/Features";
 import HowTo from "./components/Section3/HowTo";
 import AboutMe from "./components/Section4/AboutMe";
 import AnimatedSection from "@/lib/animations/AnimatedSection";
-import Box from "@/public/components/layout/Box";
+import Box from "@/lib/components/layout/Box";
 
 export default function HomePage() {
   return (

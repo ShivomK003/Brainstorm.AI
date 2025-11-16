@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@/lib/components/layout/Box";
 import { Heading } from "@/lib/components/text-styles/Heading";
 import { Body } from "@/lib/components/text-styles/Body";
@@ -9,6 +9,7 @@ import googleIcon from "@/public/assets/images/Google__G__logo.svg.webp";
 import { useSignupForm } from "@/Context/SignupFormContext";
 import { useAlert } from "@/lib/components/Alert/AlertProvider";
 import DropDownTextInput from "@/lib/components/DropDownTextInput/DropDownTextInput";
+import { useGetCountriesDialCodeQuery } from "@/lib/state/services/countriesDialCode";
 
 export default function SignupPage1() {
   const { email, setEmail, firstName, setFirstName, lastName, setLastName, phone, setPhone, nextPage } =
@@ -44,6 +45,16 @@ export default function SignupPage1() {
       ] as Array<{ name: string; code: string; dialCode: string }>,
     []
   );
+
+  const {
+    data: countriesDialCode,
+    isLoading: isLoadingCountriesDialCode,
+    error: errorCountriesDialCode,
+  } = useGetCountriesDialCodeQuery({ name: "" });
+
+  useEffect(() => {
+    console.log({ countriesDialCode, isLoadingCountriesDialCode, errorCountriesDialCode });
+  }, [countriesDialCode, isLoadingCountriesDialCode, errorCountriesDialCode]);
 
   // Derive initial dial code and national number from the stored phone (if present)
   const initialDialMatch = React.useMemo(() => /^\+[\d]+/.exec(phone || ""), [phone]);
@@ -135,10 +146,10 @@ export default function SignupPage1() {
                 searchValue={countryQuery}
                 setSearchValue={setCountryQuery}
                 setDropDownOpen={setCountryOpen}
-                items={COUNTRIES.map((country) => ({
+                items={countriesDialCode?.data?.map((country) => ({
                   key: country.code,
                   value: country.name,
-                  subvalue: country.dialCode,
+                  subvalue: country.callingCode,
                 }))}
                 setSelectedItem={(value) => setDialCode(value)}
                 saveBy="subvalue"

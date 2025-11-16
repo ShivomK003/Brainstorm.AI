@@ -48,7 +48,7 @@ function DropDownTextInput({
         {items
           .filter((item) => {
             const q = searchValue.toLowerCase();
-            return item.value.toLowerCase().includes(q) || item.key.toLowerCase().includes(q);
+            return item?.value?.toLowerCase().includes(q) || item?.key?.toLowerCase().includes(q);
           })
           .map((item) => (
             <li key={item.key} className={listItemClassName}>
@@ -67,7 +67,7 @@ function DropDownTextInput({
           ))}
         {items.filter((item) => {
           const q = searchValue.toLowerCase();
-          return item.value.toLowerCase().includes(q) || item.key.toLowerCase().includes(q);
+          return item?.value?.toLowerCase().includes(q) || item?.key?.toLowerCase().includes(q);
         }).length === 0 && <li className={noResultsTextClassName}>{noResultsText}</li>}
       </ul>
     </div>
